@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Мәдениеттану — преподаватель</title>
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="app">
+  <div class="topbar">
+    <h1>Мәдениеттану — панель преподавателя</h1>
+    <div class="spacer"></div>
+    <span id="phase-pill" class="pill"></span>
+    <button class="ghost" id="export-btn">Выгрузить ведомость</button>
+    <button class="danger" id="reset-btn">Сбросить игру</button>
+  </div>
+
+  <div class="t-grid">
+    <div class="t-col">
+      <div class="glass" style="flex:1;min-height:380px;position:relative;overflow:hidden">
+        <canvas id="scene-canvas"></canvas>
+        <div class="hint">Проекторный вид · тяните для вращения</div>
+      </div>
+      <div class="glass dock-panel">
+        <h2>Команды</h2>
+        <table class="roster-table" id="roster-table"></table>
+      </div>
+    </div>
+
+    <div class="t-col">
+      <div class="glass dock-panel" id="round-control"></div>
+      <div class="glass dock-panel" id="question-builder"></div>
+      <div class="glass dock-panel">
+        <h2>Журнал событий</h2>
+        <ul class="log-list" id="log-list"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="teacher.js"></script>
+</body>
+</html>
